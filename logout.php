@@ -8,7 +8,7 @@
 session_start();
 
 // Limpa todas as variáveis da sessão (nome, etc)
-$_SESSION = array ();
+$_SESSION = array();
 
 // Remove o cookie de sessão do navegador (se existir)
 if (ini_get("session.use_cookies")) {
@@ -18,9 +18,9 @@ if (ini_get("session.use_cookies")) {
         '',
         time() - 4200,
         $params["path"],
-         $params["domain"],
-          $params["secure"],
-           $params["httponly"]
+        $params["domain"],
+        $params["secure"],
+        $params["httponly"]
     );
 }
 

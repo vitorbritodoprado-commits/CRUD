@@ -7,6 +7,7 @@ include("verificar_sessao.php");
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,36 +16,35 @@ include("verificar_sessao.php");
 </head>
 
 <body>
-  <div class="container">
-      <h1>Cadastrar Livro</h1>
-      <p class="subtitulo">Preencha os dados do novo livro.</p>
-       
-         <!--formulário envia dados para salvar_livro.php -->
-         <form action="salvar_livro.php" method="POST">
+    <div class="container">
+        <h1>Cadastrar Livro</h1>
+        <p class="subtitulo">Preencha os dados do novo livro.</p>
+
+        <!--formulário envia dados para salvar_livro.php -->
+        <form action="salvar_livro.php" method="POST">
             <div class="form-group">
                 <label for="titulo">Título</label>
-                <input type="text" id="titulo" name="titulo"
-                placeholder="Digite o Título do livro" required>
+                <input type="text" id="titulo" name="titulo" placeholder="Digite o Título do livro" required>
             </div>
             <div class="form-group"> <label for="autor">Autor</label>
-                <input type="text" id="autor" name="autor"
-                placeholder="Digite o nome do autor do livro" required></div>
+                <input type="text" id="autor" name="autor" placeholder="Digite o nome do autor do livro" required>
+            </div>
             <div class="form-group">
                 <label for="status">Status</label>
                 <!-- select permite escolher opções pré definidas -->
-                 <select name="status" id="status" required>
+                <select name="status" id="status" required>
                     <option value="Disponivel">Disponível</option>
                     <option value="Emprestado">Emprestado</option>
-                 </select>
+                </select>
             </div>
 
-            <button type="submit" class="btn btn-block btn-successo">
+            <button type="submit" class="btn btn-block btn-sucesso">
                 Salvar livro
             </button>
-         </form>
+        </form>
         <!-- Botão de voltar para o painel principal -->
-         <a href="painel.php" class="btn btn-voltar">Voltar para o painel.</a>
-  </div>
+        <a href="painel.php" class="btn btn-voltar">Voltar para o painel.</a>
+    </div>
 
 </body>
 

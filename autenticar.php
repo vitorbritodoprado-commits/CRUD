@@ -16,7 +16,7 @@ $senha = $_POST['senha'];
 //Busca o usuário pelo email informado
 //======================================
 // Montando a consulta SQL SELECT
-$sql = "SELECT * FROM usuarios WHERE email = '$email'";
+$sql = "SELECT * FROM usuario WHERE email = '$email'";
 // Executa a consulta e guarda o resultado
 $resultado = mysqli_query($conexao, $sql);
 
@@ -32,8 +32,7 @@ if ($usuario && password_verify($senha, $usuario['senha'])) {
     //redireciona para o painel principal
     header("location: painel.php");
     exit();
-}
-else {
+} else {
     //login inválido = redireciona de volta para login com mensagem de erro
     header("Location: login.php?erro=login");
     exit();

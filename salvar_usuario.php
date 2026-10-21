@@ -5,7 +5,7 @@
 //Conceitos: POST, password_hash, MySQL, INSERT, verificação de E-mail duplicado.
 
 // Inclui o arquivo de conexão om o banco de dados.
-include('conexao.php');
+include("conexao.php");
 
 // Recebe os dados enviados pelo formulário via method POST.
 $nome = $_POST['nome'];
@@ -18,7 +18,7 @@ $senha = $_POST['senha'];
 //============================================================
 
 // Monta a consulta SQL (SELECT) para buscar o email
-$sqlVerificar = "SELECT id FROM usuarios WHERE email = '$email'";
+$sqlVerificar = "SELECT id FROM usuario WHERE email = '$email'";
 
 
 // Executa a consulta no MySQL
@@ -44,7 +44,7 @@ $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 // INSERÇÃO DO BANCO (CREATE DO CRUD)
 //======================================================
 
-$sql = "INSERT INTO usuarios (nome, email, senha) VALUES
+$sql = "INSERT INTO usuario (nome, email, senha) VALUES
 ('$nome', '$email', '$senhaCriptografada')";
 
 // Executa o INSERT no banco de dados
